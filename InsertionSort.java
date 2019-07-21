@@ -1,5 +1,11 @@
+
 import java.util.Arrays;
 
+/**
+ * @author Prasanth 
+ * Insertion Sort
+ *
+ */
 public class InsertionSort {
 
 	public static void main(String[] args) {
@@ -11,14 +17,20 @@ public class InsertionSort {
 
 	}
 
+	/**
+	 * @param arrayToBeSorted
+	 * @param n
+	 * @author Prasanth
+	 */
+
 	private static void insertionSort(int[] arrayToBeSorted, int n) {
 		for (int i = 0; i < n; i++) {
 			int temp = arrayToBeSorted[i];
 			int j = i;
 
 			while (j > 0 && temp < arrayToBeSorted[j - 1]) {
-				arrayToBeSorted[j] = arrayToBeSorted[j-1];
-				j=j-1;
+				arrayToBeSorted[j] = arrayToBeSorted[j - 1];
+				j = j - 1;
 				arrayToBeSorted[j] = temp;
 			}
 		}
